@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx-server:
+    image: nginx-server:latest
+    container_name: nginx-server
+    volumes:
+      - ./code:/my-site
+    ports:
+      - 8000:80
