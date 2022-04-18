@@ -7,4 +7,4 @@ COPY    ./custom-site.conf /etc/nginx/sites-available/.
 WORKDIR /etc/nginx/sites-enabled
 RUN     rm -f default
 RUN     ln -sf ~/sites-available/custom-site.conf ./custom-site.conf
-CMD     nginx -g 'daemon off;'
+CMD     ["nginx", "-g", "daemon off;"]
